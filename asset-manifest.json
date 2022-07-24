@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/list_and_timer_task.github.io/static/css/main.073c9b0a.css",
-    "main.js": "/list_and_timer_task.github.io/static/js/main.ea7d4b71.js",
+    "main.css": "/list_and_timer_task.github.io/static/css/main.74aa1852.css",
+    "main.js": "/list_and_timer_task.github.io/static/js/main.73a95977.js",
     "static/js/787.fbff90bf.chunk.js": "/list_and_timer_task.github.io/static/js/787.fbff90bf.chunk.js",
-    "static/media/logo.svg": "/list_and_timer_task.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/list_and_timer_task.github.io/index.html",
-    "main.073c9b0a.css.map": "/list_and_timer_task.github.io/static/css/main.073c9b0a.css.map",
-    "main.ea7d4b71.js.map": "/list_and_timer_task.github.io/static/js/main.ea7d4b71.js.map",
+    "main.74aa1852.css.map": "/list_and_timer_task.github.io/static/css/main.74aa1852.css.map",
+    "main.73a95977.js.map": "/list_and_timer_task.github.io/static/js/main.73a95977.js.map",
     "787.fbff90bf.chunk.js.map": "/list_and_timer_task.github.io/static/js/787.fbff90bf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.ea7d4b71.js"
+    "static/css/main.74aa1852.css",
+    "static/js/main.73a95977.js"
   ]
 }
