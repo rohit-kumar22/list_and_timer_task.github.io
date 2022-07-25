@@ -6,18 +6,30 @@ export default function Task1() {
   const [list2, setList2] = useState([]);
   const [unionList, setUnionList] = useState([]);
   const [uniqueList, setUniqueList] = useState([]);
-  const [userInput1, setUserInput1] = useState();
-  const [userInput2, setUserInput2] = useState();
+  const [userInput1, setUserInput1] = useState("");
+  const [userInput2, setUserInput2] = useState("");
 
-  const inputList1 = () => {};
+  const inputList1 = () => {
+    setUserInput1("");
+  };
 
-  const inputList2 = () => {};
+  const inputList2 = () => {
+    setUserInput2("");
+  };
   const filterList = () => {
     setUnionList([...new Set([...list1, ...list2])]);
 
     setUniqueList(
       [...new Set(list1)].filter((element) => new Set(list2).has(element))
     );
+  };
+  const handleOnClick1 = () => {
+    setList1((prev) => [...prev, userInput1]);
+    setUserInput1("");
+  };
+  const handleOnClick2 = () => {
+    setList2((prev) => [...prev, userInput2]);
+    setUserInput2("");
   };
 
   return (
@@ -29,15 +41,20 @@ export default function Task1() {
           name="listOne"
           type="text"
           id="listOne"
+          value={userInput1}
           placeholder="Enter element"
           onChange={(e) => setUserInput1(e.target.value)}
         />
 
         <button
-          onClick={() => {
-            setList1((prev) => [...prev, userInput1]);
-            setUserInput1();
-          }}>
+          style={{
+            width: "12rem",
+            height: "3rem",
+            backgroundColor: "brown",
+            fontSize: "1.5rem",
+            marginLeft: "5px",
+          }}
+          onClick={() => handleOnClick1()}>
           Add Item
         </button>
 
@@ -45,15 +62,20 @@ export default function Task1() {
           name="listOne"
           type="text"
           id="listTwo"
+          value={userInput2}
           placeholder="Enter element"
           style={{ marginLeft: "50px" }}
           onChange={(e) => setUserInput2(e.target.value)}
         />
         <button
-          onClick={() => {
-            setList2((prev) => [...prev, userInput2]);
-            setUserInput2();
-          }}>
+          style={{
+            width: "12rem",
+            height: "3rem",
+            backgroundColor: "brown",
+            fontSize: "1.5rem",
+            marginLeft: "5px",
+          }}
+          onClick={() => handleOnClick2()}>
           Add Item
         </button>
       </div>
@@ -62,9 +84,9 @@ export default function Task1() {
           type="submit"
           style={{
             width: "25rem",
-            height: "5rem",
+            height: "6rem",
             backgroundColor: "brown",
-            fontSize: "3rem",
+            fontSize: "5rem",
           }}
           onClick={() => filterList()}>
           Compute

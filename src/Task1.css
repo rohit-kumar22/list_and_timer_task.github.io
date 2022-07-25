@@ -17,10 +17,10 @@ input{
     font-size: 1.5rem;
 }
 
-button{
+.add-button{
     margin-left: 50px;
-    font-size: 1.5rem;
-    
+    font-size: o.5rem !important;
+
 }
 
 .list-data{
@@ -99,3 +99,5 @@ color: white;
     height:80%;
     padding: 50px 100px 0 100px;
 }
+
+

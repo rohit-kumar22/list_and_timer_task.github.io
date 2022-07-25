@@ -1,27 +1,17 @@
-import "./App.css";
 import Task1 from "./Task1";
+import Task2 from "./Task2";
+import Home from "./Home";
+
+import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 
 function App() {
   return (
-    <div className="container">
-      <div className="nav">
-        <span>InnerHour</span>
-      </div>
-      <div className="grid-container">
-        <div className="side-bar">
-          <button value="task1" className="btn">
-            <span>Task1</span>
-          </button>
-          <br></br>
-          <button value="task1">
-            <span>Task2</span>
-          </button>
-        </div>
-        <div>
-          <Task1 />
-        </div>
-      </div>
-    </div>
+    <>
+      {console.log("path")}
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
+    </>
   );
 }
 
