@@ -50,10 +50,34 @@
 }
 
 .task-heading{
-    margin-left: 400px;
+    text-align: center;
     font-size: 5rem;
     color: red;
     font-weight: 600;
     width:100%;
 
+}
+
+.timer-set{
+    justify-content: center;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.timer-set > button{
+    width:max-content;
+    background-color: rgb(77, 74, 74);
+    margin-left: 25px;
+}
+
+.timer-set > select{
+    font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 767px){
+    .task-heading{
+        text-align: center;
+        display: block;
+    }
 }

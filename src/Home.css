@@ -16,6 +16,8 @@ height: 100vh;
   background-color: white;
   height: 100vh;
   box-shadow: 0.5px 0px black;
+  justify-content: center;
+  text-align: center;
 
 }
 
@@ -47,14 +49,79 @@ button:hover{
   margin-bottom: 25px;
 }
 
+.mobile-view{
+  display:none;
+}
 
-/* @media only screen and (max-width: 767px) {
+ @media only screen and (max-width: 767px) {
+
+  .mobile-view{
+    display: block;
+  }
    .side-bar{
     display:none !important;
    }
+.hamburger{
+  display: block !important;
+  width: "50px"; 
+  height: "50px";
+}
+html{font-size: 60%;}
 
+.grid-container{
+  display: block;
+}
 
-} */
+.nav{
+  display: flex;
+  text-align: center;
+}
+
+.nav-heading{
+  padding-top: 12px;
+
+}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+} 
 
 .links{
   text-decoration: none !important;

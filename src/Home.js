@@ -6,14 +6,42 @@ import hamburger from "./hamburger.jpg";
 import "./Home.css";
 
 export default function Home() {
+  const showFunction = () => {
+    document.getElementById("myDropdown").classList.toggle("show");
+  };
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropbtn")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
+  };
   return (
     <div className="container">
       <div className="nav ">
-        <div style={{ width: "50px", height: "50px", display: "none" }}>
-          <img width="100%" src={hamburger}></img>
+        <div
+          style={{ width: "50px", height: "50px" }}
+          className="hamburger dropdown mobile-view">
+          <button className="drop-btn" onClick={showFunction}>
+            <img width="100%" src={hamburger}></img>
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
         </div>
 
-        <span style={{ display: "flex", fontSize: "1.5rem" }}>
+        <span
+          style={{ display: "flex", fontSize: "1.5rem" }}
+          className="nav-heading">
           &emsp;InnerHour
         </span>
       </div>
